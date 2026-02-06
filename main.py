@@ -27,3 +27,25 @@ my_file.write("Hi! Hello to all my friends.")
 os.remove('Codingal.txt')
 
 os.rmdir('Folder')
+
+
+input_file = open("Repeated.txt", "r")
+
+output_file = open("UpdatedFile.txt", "w")
+
+seen_lines = seet()
+
+print("Removing duplicate lines...")
+
+for line in input_file:
+
+    if line not in seen_lines:
+
+        output_file.write(line)
+
+        seen_lines.add(line)
+
+input_file.close()
+output_file.close()
+
+print("Done! Duplicate line removed")
